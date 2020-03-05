@@ -1,0 +1,22 @@
+﻿@model HomeVm
+@using Microsoft.FeatureManagement.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+    
+
+    <feature name="NewDisplayMessage">
+        <div class="text-center">
+            <h1 class="display-4">@Model.WelcomeMessage</h1>
+        </div>
+
+    </feature>
+    <feature name="NewDisplayMessage" negate="true">
+        <div class="text-center">
+            <h4 class="display-4">@Model.WelcomeMessage</h4>
+        </div>
+
+    </feature>
+
